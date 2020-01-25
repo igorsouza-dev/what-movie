@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import { Container, Input, Button } from './styles';
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar() {
+  const history = useHistory();
   const [input, setInput] = useState('');
+
   function handleSubmit(e) {
     e.preventDefault();
-    onSearch(input);
+    history.push(`/search?q=${input}`);
   }
   return (
     <Container data-testid="search-bar" onSubmit={handleSubmit}>

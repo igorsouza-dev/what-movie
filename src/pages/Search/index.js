@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container } from './styles';
+import PageContainer from 'components/PageContainer';
 
 export default function Search() {
-  return <Container>Search</Container>;
+  return <PageContainer>Search</PageContainer>;
 }

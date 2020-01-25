@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import { startOfWeek, endOfWeek, getYear } from 'date-fns';
 import SearchBar from 'components/SearchBar';
 import Logo from 'components/Logo';
@@ -9,12 +8,13 @@ import api from 'services/api';
 import { Container } from './styles';
 
 export default function Main() {
+  const [loadingWeekMovies, setLoadingWeekMovies] = useState(true);
   const [weekMovies, setWeekMovies] = useState([]);
+  const [loadingTopMoviesYear, setLoadingTopMoviesYear] = useState(true);
   const [topMoviesYear, setTopMoviesYear] = useState([]);
+  const [loadingTopMoviesLastYear, setLoadingTopMoviesLastYear] = useState(true);
   const [topMoviesLastYear, setTopMoviesLastYear] = useState([]);
   const year = getYear(new Date());
-
-  const history = useHistory();
 
   function getDateOnly(date) {
     return date.toISOString().substring(0, 10);
@@ -26,83 +26,82 @@ export default function Main() {
       const end = getDateOnly(endOfWeek(today));
       try {
         const response = await api.get(
-          `/discover/movie?primary_release_date.gte=${start}&primary_release_date.lte=${end}&sort_by=vote_average.desc`
+          `/discover/movie?primary_release_date.gte=${start}&primary_release_date.lte=${end}&sort_by=vote_average.desc`,
         );
         const { results } = response.data;
         setWeekMovies(
-          results.map(movie => {
-            const url =
-              movie.poster_path &&
-              `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
+          results.map((movie) => {
+            const url = movie.poster_path
+              && `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
             return { ...movie, url };
-          })
+          }),
         );
       } catch (e) {
         console.error(e.message);
       }
+      setLoadingWeekMovies(false);
     }
     async function getTopMoviesYear() {
       try {
         const response = await api.get(
-          `/discover/movie?primary_release_year=${year}&sort_by=vote_average.desc&vote_count.gte=10`
+          `/discover/movie?primary_release_year=${year}&sort_by=vote_average.desc&vote_count.gte=10`,
         );
         const { results } = response.data;
         setTopMoviesYear(
-          results.map(movie => {
-            const url =
-              movie.poster_path &&
-              `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
+          results.map((movie) => {
+            const url = movie.poster_path
+              && `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
             return { ...movie, url };
-          })
+          }),
         );
       } catch (e) {
         console.log(e.message);
       }
+      setLoadingTopMoviesYear(false);
     }
     async function getTopMoviesLastYear() {
       try {
         const lastYear = year - 1;
         const response = await api.get(
-          `/discover/movie?primary_release_year=${lastYear}&sort_by=vote_average.desc&vote_count.gte=10`
+          `/discover/movie?primary_release_year=${lastYear}&sort_by=vote_average.desc&vote_count.gte=10`,
         );
         const { results } = response.data;
         setTopMoviesLastYear(
-          results.map(movie => {
-            const url =
-              movie.poster_path &&
-              `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
+          results.map((movie) => {
+            const url = movie.poster_path
+              && `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
             return { ...movie, url };
-          })
+          }),
         );
       } catch (e) {
         console.log(e.message);
       }
+      setLoadingTopMoviesLastYear(false);
     }
     getMoviesOnTheater();
     getTopMoviesYear();
     getTopMoviesLastYear();
   }, [year]);
-  function handleSearch(search) {
-    history.push(`/search?q=${search}`);
-  }
 
   return (
     <Container>
       <Logo />
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar />
       {weekMovies && (
-        <PostersSection movies={weekMovies} title="Opening this week" />
+        <PostersSection movies={weekMovies} title="Opening this week" loading={loadingWeekMovies} />
       )}
       {topMoviesYear && (
         <PostersSection
           movies={topMoviesYear}
           title={`Top movies of ${year}`}
+          loading={loadingTopMoviesYear}
         />
       )}
       {topMoviesLastYear && (
         <PostersSection
           movies={topMoviesLastYear}
           title="Top movies of last year"
+          loading={loadingTopMoviesLastYear}
         />
       )}
     </Container>
