@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 
+export const Title = styled.h2``;
 export const Container = styled.div`
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px;
-  overflow: auto;
+  margin-top: 40px;
 `;
