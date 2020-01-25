@@ -11,8 +11,10 @@ export const Container = styled.div`
   align-items: center;
   border-radius: 4px;
   position: relative;
+  transition: box-shadow 0.5s ease-out;
   &:hover {
     cursor: pointer;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
   }
 `;
 

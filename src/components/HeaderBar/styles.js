@@ -18,4 +18,11 @@ export const Container = styled.div`
 
 export const LinkContainer = styled(Link)`
   width: 100%;
+
+  h1 {
+    transition: text-shadow 0.5s ease-out;
+    &:hover {
+      text-shadow: 0 2px 8px #000;
+    }
+  }
 `;
