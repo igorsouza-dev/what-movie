@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar /> should render 1`] = `
+<div
+  class="sc-AykKC cGRdXF"
+  data-testid="search-bar"
+>
+  <input
+    class="sc-AykKD dRqlXC"
+    placeholder="Type the name of a movie"
+    type="text"
+  />
+</div>
+`;
