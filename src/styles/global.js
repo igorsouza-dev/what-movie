@@ -18,7 +18,9 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background-image: linear-gradient(25deg, #826fe4, #ab90eb, #d1b2f1, #f4d5f7);
     height: 100%;
-    overflow: auto;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   body, input, button, textarea {
     font-family: 'Roboto Mono', monospace;

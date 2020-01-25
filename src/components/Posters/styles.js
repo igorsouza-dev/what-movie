@@ -6,7 +6,10 @@ export const Container = styled.div`
     if (props.type === 'flex') {
       return 'overflow-x: scroll;';
     }
-    return '';
+    return `
+      grid-template-columns: repeat(5, 185px);
+      grid-gap: 5px;
+    `;
   }}
 
   padding: 10px;

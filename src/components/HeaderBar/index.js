@@ -2,13 +2,15 @@ import React from 'react';
 
 import SearchBar from 'components/SearchBar';
 import Logo from 'components/Logo';
-import { Container } from './styles';
+import { Container, LinkContainer } from './styles';
 
 export default function HeaderBar() {
   return (
     <Container>
-      <Logo size={16} />
-      <SearchBar />
+      <LinkContainer to="/">
+        <Logo size={40} color="#fff" />
+      </LinkContainer>
+      <SearchBar small />
     </Container>
   );
 }
