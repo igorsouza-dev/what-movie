@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 import { FaFilm, FaStar } from 'react-icons/fa';
 import {
   Container,
@@ -9,14 +11,19 @@ import {
   NoPoster,
   Favorite,
   WatchLater,
-  Score
+  Score,
 } from './styles';
 
-export default function Poster({ movie }) {
+function Poster({ movie }) {
+  const history = useHistory();
+  function goToDetail() {
+    history.push(`/details/${movie.id}`);
+  }
   return (
-    <Container>
+    <Container onClick={goToDetail}>
       <Score>
-        {movie.vote_average}/10
+        {movie.vote_average}
+        /10
       </Score>
       {movie.url && (
         <ImgContainer>
@@ -42,3 +49,12 @@ export default function Poster({ movie }) {
     </Container>
   );
 }
+Poster.propTypes = {
+  movie: PropTypes.shape({
+    id: PropTypes.number,
+    vote_average: PropTypes.number,
+    url: PropTypes.string,
+    original_title: PropTypes.string,
+  }).isRequired,
+};
+export default Poster;
