@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Posters from 'components/Posters';
 import { Container, Title } from './styles';
 
-export default function PostersSection({ movies, title }) {
+function PostersSection({ movies, title }) {
   return (
     <Container>
       <Title>{title}</Title>
@@ -10,3 +12,10 @@ export default function PostersSection({ movies, title }) {
     </Container>
   );
 }
+
+PostersSection.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+export default PostersSection;

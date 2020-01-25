@@ -9,11 +9,15 @@ import {
   NoPoster,
   Favorite,
   WatchLater,
+  Score
 } from './styles';
 
 export default function Poster({ movie }) {
   return (
     <Container>
+      <Score>
+        {movie.vote_average}/10
+      </Score>
       {movie.url && (
         <ImgContainer>
           <img src={movie.url} alt={movie.original_title} />

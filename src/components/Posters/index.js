@@ -14,7 +14,11 @@ function Posters({ movies, type }) {
 }
 Posters.propTypes = {
   type: PropTypes.string,
-  movies: PropTypes.shape().isRequired,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 Posters.defaultProps = {
   type: 'flex',

@@ -9,6 +9,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const NameContainer = styled.div`
@@ -25,6 +29,17 @@ export const NameContainer = styled.div`
     text-align: center;
     text-overflow: ellipsis;
   }
+`;
+export const Score = styled.div`
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 6px;
 `;
 export const InfoContainer = styled.div`
   display: flex;
