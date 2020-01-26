@@ -20,11 +20,11 @@ export const Backdrop = styled.div`
 export const DetailsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: -45px 40px 0 40px;
-  background: #fff;
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.6);
   padding: 10px;
   position: relative;
+  height: 100%;
+  width: 100%;
 `;
 export const Score = styled.div`
   background: rgba(0, 0, 0, 0.8);
@@ -37,18 +37,27 @@ export const Score = styled.div`
   right: 10px;
   border-radius: 6px;
 `;
-export const InfoContainer = styled.div`
+export const TitleContainer = styled.div`
   margin-left: 10px;
+`;
+export const InfoContainer = styled.div`
+  background: #fff;
+  padding: 10px;
+  width: 100%;
 `;
 export const Poster = styled.img`
   height: 185px;
+  background: #ddd;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
 `;
 export const GenreContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin: 10px;
 `;
-export const Genre = styled.div`
+export const Pill = styled.div`
   border-radius: 4px;
   background: #363636;
   color: #eee;
@@ -60,7 +69,9 @@ export const Genre = styled.div`
 export const Title = styled.h2`
   max-width: 90%;
 `;
-export const Subtitle = styled.h3``;
+export const Subtitle = styled.h3`
+  margin-top: 10px;
+`;
 
 export const VideosContainer = styled.div`
   display: flex;

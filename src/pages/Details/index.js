@@ -12,10 +12,11 @@ import {
   Title,
   Description,
   GenreContainer,
-  Genre,
+  Pill,
   Score,
   Subtitle,
   VideosContainer,
+  TitleContainer,
   Video,
 } from './styles';
 
@@ -51,35 +52,43 @@ export default function Details() {
         <Container>
           <Backdrop
             background={`${process.env.REACT_APP_TMDB_IMAGE_URL}/original${movie.backdrop_path}`}
-          />
-          <DetailsContainer>
-            <Poster
-              src={`${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`}
-            />
-            <Score>{`${movie.vote_average}/10`}</Score>
-            <InfoContainer>
-              <Title>{`${movie.original_title} (${movie.year})`} </Title>
-              <GenreContainer>
-                <Genre>{`${movie.runtime}min`}</Genre>
-                {' - '}
-                {movie.genres.map(genre => (
-                  <Genre key={genre.id}>{genre.name}</Genre>
-                ))}
-              </GenreContainer>
-              <Description>{movie.overview}</Description>
-              <Subtitle>Trailers</Subtitle>
-              <VideosContainer>
-                {movie.videos.map(video => (
+          >
+            <DetailsContainer>
+              <Poster
+                src={`${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`}
+              />
+              <Score>{`${movie.vote_average}/10`}</Score>
+              <TitleContainer>
+                <Title>{`${movie.original_title} (${movie.year})`} </Title>
+                <GenreContainer>
+                  <Pill>{`${movie.runtime} min`}</Pill>
+                  {' - '}
+                  {movie.genres.map(genre => (
+                    <Pill key={genre.id}>{genre.name}</Pill>
+                  ))}
+                </GenreContainer>
+              </TitleContainer>
+            </DetailsContainer>
+          </Backdrop>
+          <InfoContainer>
+            <Subtitle>Overview</Subtitle>
+            <Description>{movie.overview}</Description>
+            <Subtitle>Trailers</Subtitle>
+            <VideosContainer>
+              {movie.videos.length ? (
+                movie.videos.map(video => (
                   <Video
                     key={video.key}
                     type="text/html"
                     src={`http://www.youtube.com/embed/${video.key}?autoplay=0`}
                     frameBorder="0"
                   />
-                ))}
-              </VideosContainer>
-            </InfoContainer>
-          </DetailsContainer>
+                ))
+              ) : (
+                <Description>No video found.</Description>
+              )}
+            </VideosContainer>
+          </InfoContainer>
         </Container>
       )}
     </PageContainer>
