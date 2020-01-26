@@ -39,6 +39,9 @@ export default function Details() {
         }
         const year = getYear(parseISO(data.release_date));
         data.year = year || 'Unknow year';
+        if (!data.overview) {
+          data.overview = 'No overview provided.';
+        }
         setMovie(data);
       } catch (e) {}
     }
@@ -82,6 +85,9 @@ export default function Details() {
                     type="text/html"
                     src={`http://www.youtube.com/embed/${video.key}?autoplay=0`}
                     frameBorder="0"
+                    allowFullScreen
+                    title="YouTube"
+                    className="youtube-player"
                   />
                 ))
               ) : (

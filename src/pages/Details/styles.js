@@ -82,6 +82,7 @@ export const GenreContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin: 10px;
+  flex-wrap: wrap;
 `;
 export const Pill = styled.div`
   border-radius: 4px;
@@ -108,13 +109,18 @@ export const VideosContainer = styled.div`
 
 export const Video = styled.iframe`
   margin: 10px;
+  width: 100%;
   @media only screen and (${device.mobileS}) {
     width: 280px;
+    max-width: 280px;
     height: 130px;
+    max-height: 130px;
   }
   @media only screen and (${device.mobileM}) {
     width: 335px;
     height: 160px;
+    max-width: 335px;
+    max-height: 160px;
   }
   @media only screen and (${device.mobileL}) {
     width: 385px;
@@ -123,6 +129,8 @@ export const Video = styled.iframe`
   @media only screen and (${device.tablet}) {
     width: 728px;
     height: 340px;
+    max-width: 728px;
+    max-height: 340px;
   }
   @media only screen and (${device.laptop}) {
     width: 984px;
