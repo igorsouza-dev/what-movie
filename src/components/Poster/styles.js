@@ -4,7 +4,8 @@ import { darken } from 'polished';
 export const Container = styled.div`
   height: 100%;
   width: 100%;
-  margin: 5px;
+  max-width: 185px;
+  margin: 0 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +15,7 @@ export const Container = styled.div`
   transition: box-shadow 0.5s ease-out;
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.7);
   }
 `;
 
@@ -96,6 +97,7 @@ export const ImgContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;
+  background: #ddd;
   img {
     height: 278px;
   }

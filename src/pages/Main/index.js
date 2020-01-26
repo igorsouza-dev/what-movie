@@ -22,11 +22,11 @@ export default function Main() {
     },
     {
       title: `Top movies of ${year}`,
-      query: `/discover/movie?primary_release_year=${year}&sort_by=vote_average.desc&vote_count.gte=10`,
+      query: `/discover/movie?primary_release_year=${year}&sort_by=vote_average.desc&vote_count.gte=200`,
     },
     {
       title: 'Top movies of last year',
-      query: `/discover/movie?primary_release_year=${lastYear}&sort_by=vote_average.desc&vote_count.gte=10`,
+      query: `/discover/movie?primary_release_year=${lastYear}&sort_by=vote_average.desc&vote_count.gte=1000`,
     },
   ];
 
