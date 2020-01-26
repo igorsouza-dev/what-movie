@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { device, posterSize, screenSize } from 'styles/variables';
+import { device } from 'styles/variables';
 
 export const Container = styled.div`
   display: flex;

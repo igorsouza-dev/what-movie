@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device, screenSize } from 'styles/variables';
 
 export const Container = styled.div`
   display: flex;
@@ -8,6 +9,29 @@ export const Container = styled.div`
   width: 100%;
   max-width: 900px;
   height: 100%;
+  padding: 10px;
+
+  @media only screen and (${device.mobileS}) {
+    max-width: ${screenSize.mobileS};
+  }
+  @media only screen and (${device.mobileM}) {
+    max-width: ${screenSize.mobileM};
+  }
+  @media only screen and (${device.mobileL}) {
+    max-width: ${screenSize.mobileL};
+  }
+  @media only screen and (${device.tablet}) {
+    max-width: ${screenSize.tablet};
+  }
+  @media only screen and (${device.laptop}) {
+    max-width: ${screenSize.laptop};
+  }
+  @media only screen and (${device.laptopL}) {
+    max-width: ${screenSize.laptopL};
+  }
+  @media only screen and (${device.desktop}) {
+    max-width: ${screenSize.desktop};
+  }
 `;
 
 export const Backdrop = styled.div`
@@ -16,6 +40,7 @@ export const Backdrop = styled.div`
   height: 250px;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 4px 4px 0 0;
 `;
 export const DetailsContainer = styled.div`
   display: flex;
@@ -44,6 +69,7 @@ export const InfoContainer = styled.div`
   background: #fff;
   padding: 10px;
   width: 100%;
+  border-radius: 0 0 4px 4px;
 `;
 export const Poster = styled.img`
   height: 185px;
@@ -81,9 +107,26 @@ export const VideosContainer = styled.div`
 `;
 
 export const Video = styled.iframe`
-  width: 640px;
-  height: 300px;
   margin: 10px;
-}
+  @media only screen and (${device.mobileS}) {
+    width: 280px;
+    height: 130px;
+  }
+  @media only screen and (${device.mobileM}) {
+    width: 335px;
+    height: 160px;
+  }
+  @media only screen and (${device.mobileL}) {
+    width: 385px;
+    height: 180px;
+  }
+  @media only screen and (${device.tablet}) {
+    width: 728px;
+    height: 340px;
+  }
+  @media only screen and (${device.laptop}) {
+    width: 984px;
+    height: 460px;
+  }
 `;
 export const Description = styled.p``;
