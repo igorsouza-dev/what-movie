@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { posterSize } from 'styles/variables';
 
 export const Container = styled.div`
   height: 100%;
   width: 100%;
-  max-width: 185px;
+  max-width: ${posterSize}px;
   margin: 0 5px;
   display: flex;
   flex-direction: column;
@@ -28,7 +29,7 @@ export const NameContainer = styled.div`
   height: 50px;
   padding: 5px;
   overflow: hidden;
-  max-width: 185px;
+  max-width: ${posterSize}px;
   strong {
     text-align: center;
     text-overflow: ellipsis;
@@ -86,12 +87,12 @@ export const NoPoster = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 185px;
+  width: ${posterSize}px;
   height: 278px;
   background: #ddd;
 `;
 export const ImgContainer = styled.div`
-  width: 185px;
+  width: ${posterSize}px;
   min-height: 278px;
   display: flex;
   justify-content: center;
