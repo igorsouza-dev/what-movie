@@ -83,7 +83,7 @@ export default function Details() {
                   <Video
                     key={video.key}
                     type="text/html"
-                    src={`http://www.youtube.com/embed/${video.key}?autoplay=0`}
+                    src={`https://www.youtube.com/embed/${video.key}?autoplay=0`}
                     frameBorder="0"
                     allowFullScreen
                     title="YouTube"
