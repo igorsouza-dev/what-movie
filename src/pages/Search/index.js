@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import PageContainer from 'components/PageContainer';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useLocation, useHistory } from 'react-router-dom';
 import api from 'services/api';
 import Posters from 'components/Posters';
+import Paginator from 'components/Paginator';
+import { InfoText } from './styles';
 
 function useQueryParams() {
   return new URLSearchParams(useLocation().search);
 }
 export default function Search() {
+  const [loading, setLoading] = useState(true);
   const history = useHistory();
   const query = useQueryParams();
   const [movies, setMovies] = useState();
@@ -19,6 +21,8 @@ export default function Search() {
 
   useEffect(() => {
     async function searchMovie() {
+      setTotalPages(0);
+      setLoading(true);
       try {
         const response = await api.get(`/search/movie?query=${q}&page=${page}`);
         const { results, total_results, total_pages } = response.data;
@@ -33,6 +37,7 @@ export default function Search() {
         setTotal(total_results);
         setTotalPages(total_pages);
       } catch (e) {}
+      setLoading(false);
     }
     searchMovie();
   }, [q, page]);
@@ -45,23 +50,32 @@ export default function Search() {
   }
   function nextPage() {
     const p = page + 1;
-    console.log(p, totalPages);
     if (p <= totalPages) {
       setPage(p);
       history.push(`/search?q=${q}&page=${p}`);
     }
   }
+  if (loading) {
+    return (
+      <PageContainer>
+        <strong>Searching...</strong>
+      </PageContainer>
+    );
+  }
   return (
     <PageContainer>
-      <div>
-        <button type="button" onClick={previousPage}>
-          <FaChevronLeft />
-        </button>
-        We found {total} movies for {`"${q}"`}. Page {page}/{totalPages}
-        <button type="button" onClick={nextPage}>
-          <FaChevronRight />
-        </button>
-      </div>
+      <InfoText>
+        We found {total} movies for <span>{`"${q}"`}</span>.
+      </InfoText>
+      {totalPages > 0 && (
+        <Paginator
+          page={page}
+          previousPage={previousPage}
+          nextPage={nextPage}
+          totalPages={totalPages}
+        />
+      )}
+
       {movies && <Posters movies={movies} type="grid" />}
     </PageContainer>
   );
