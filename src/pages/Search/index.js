@@ -27,16 +27,15 @@ export default function Search() {
         const response = await api.get(`/search/movie?query=${q}&page=${page}`);
         const { results, total_results, total_pages } = response.data;
         setMovies(
-          results.map(movie => {
-            const url =
-              movie.poster_path &&
-              `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
+          results.map((movie) => {
+            const url = movie.poster_path
+              && `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
             return { ...movie, url };
-          })
+          }),
         );
         setTotal(total_results);
         setTotalPages(total_pages);
-      } catch (e) {}
+      } catch (e) { }
       setLoading(false);
     }
     searchMovie();
@@ -65,7 +64,9 @@ export default function Search() {
   return (
     <PageContainer>
       <InfoText>
-        We found {total} movies for <span>{`"${q}"`}</span>.
+        {`We found ${total} movies for `}
+        <span>{`"${q}"`}</span>
+        .
       </InfoText>
       {totalPages > 0 && (
         <Paginator
@@ -76,7 +77,7 @@ export default function Search() {
         />
       )}
 
-      {movies && <Posters movies={movies} type="grid" />}
+      {movies && <Posters movies={movies} type="grid" showButtons />}
     </PageContainer>
   );
 }

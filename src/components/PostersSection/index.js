@@ -5,7 +5,7 @@ import Posters from 'components/Posters';
 import api from 'services/api';
 import { Container, Title } from './styles';
 
-function PostersSection({ title, query }) {
+function PostersSection({ title, query, showButtons }) {
   const [movies, setMovies] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -15,12 +15,11 @@ function PostersSection({ title, query }) {
         const response = await api.get(query);
         const { results } = response.data;
         setMovies(
-          results.map(movie => {
-            const url =
-              movie.poster_path &&
-              `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
+          results.map((movie) => {
+            const url =              movie.poster_path
+              && `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
             return { ...movie, url };
-          })
+          }),
         );
       } catch (e) {
         setError(e.message);
@@ -33,9 +32,9 @@ function PostersSection({ title, query }) {
     <Container>
       <Title>{title}</Title>
       {loading && <div>Loading...</div>}
-      {movies &&
-        (movies.length ? (
-          <Posters movies={movies} />
+      {movies
+        && (movies.length ? (
+          <Posters movies={movies} showButtons={showButtons} />
         ) : (
           <div>No movies found</div>
         ))}

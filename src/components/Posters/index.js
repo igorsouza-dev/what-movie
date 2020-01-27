@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Poster from 'components/Poster';
 import { Container } from './styles';
 
-function Posters({ movies, type }) {
+function Posters({ movies, type, showButtons }) {
   return (
     <Container type={type}>
-      {movies.map(movie => (
-        <Poster movie={movie} key={movie.id} />
+      {movies.map((movie) => (
+        <Poster movie={movie} key={movie.id} showButtons={showButtons} />
       ))}
     </Container>
   );
@@ -17,7 +17,7 @@ Posters.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-    })
+    }),
   ).isRequired,
 };
 Posters.defaultProps = {

@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Main from 'pages/Main';
 import Search from 'pages/Search';
 import Details from 'pages/Details';
+import User from 'pages/User';
 
 export default function Routes() {
   return (
@@ -11,6 +12,7 @@ export default function Routes() {
       <Route path="/" exact component={Main} />
       <Route path="/search" component={Search} />
       <Route path="/details/:id" component={Details} />
+      <Route path="/user" component={User} />
     </Switch>
   );
 }

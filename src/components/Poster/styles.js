@@ -78,6 +78,9 @@ export const Button = styled.button`
 export const WatchLater = styled(Button)`
   flex: 1;
   border-radius: 0 0 0 4px;
+  span {
+    margin-left: 5px;
+  }
 `;
 export const Favorite = styled(Button)`
   padding: 12px;

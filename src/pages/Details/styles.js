@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device, screenSize } from 'styles/variables';
+import { device } from 'styles/variables';
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const Backdrop = styled.div`
-  background: url(${props => props.background});
+  background: url(${(props) => props.background});
   width: 100%;
   height: 250px;
   background-size: cover;
@@ -114,4 +114,5 @@ export const Video = styled.iframe`
     height: 460px;
   }
 `;
+
 export const Description = styled.p``;

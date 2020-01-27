@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { device, posterSize, screenSize } from 'styles/variables';
 
 export const Container = styled.div`
-  display: ${props => props.type};
-  ${props => {
+  display: ${(props) => props.type};
+  ${(props) => {
     if (props.type === 'flex') {
-      return 'overflow-x: scroll;';
+      return 'overflow-x: auto;';
     }
     return `
       grid-template-columns: repeat(5, ${posterSize}px);
@@ -17,7 +17,7 @@ export const Container = styled.div`
         flex-direction: row;
         justify-content: flex-start;
         max-width: ${screenSize.mobileM};
-        overflow-x: scroll;
+        overflow-x: auto;
       }
       @media only screen and (${device.mobileS}) {
         max-width: ${screenSize.mobileS};

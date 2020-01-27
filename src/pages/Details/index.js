@@ -3,6 +3,7 @@ import PageContainer from 'components/PageContainer';
 import { useParams } from 'react-router-dom';
 import api from 'services/api';
 import { getYear, parseISO } from 'date-fns';
+import PosterButtons from 'components/PosterButtons';
 import {
   Container,
   Backdrop,
@@ -20,6 +21,7 @@ import {
   Video,
 } from './styles';
 
+
 export default function Details() {
   const { id } = useParams();
   const [movie, setMovie] = useState();
@@ -28,13 +30,13 @@ export default function Details() {
     async function getMovie() {
       try {
         const response = await api.get(
-          `/movie/${id}?append_to_response=videos`
+          `/movie/${id}?append_to_response=videos`,
         );
         const { data } = response;
         const { videos } = data;
         if (videos.results.length) {
           data.videos = videos.results.filter(
-            video => video.site === 'YouTube'
+            (video) => video.site === 'YouTube',
           );
         }
         const year = getYear(parseISO(data.release_date));
@@ -43,7 +45,7 @@ export default function Details() {
           data.overview = 'No overview provided.';
         }
         setMovie(data);
-      } catch (e) {}
+      } catch (e) { }
     }
     getMovie();
     setLoading(false);
@@ -62,16 +64,21 @@ export default function Details() {
               />
               <Score>{`${movie.vote_average}/10`}</Score>
               <TitleContainer>
-                <Title>{`${movie.original_title} (${movie.year})`} </Title>
+                <Title>
+                  {`${movie.original_title} (${movie.year})`}
+                  {' '}
+                </Title>
                 <GenreContainer>
                   <Pill>{`${movie.runtime} min`}</Pill>
                   {' - '}
-                  {movie.genres.map(genre => (
+                  {movie.genres.map((genre) => (
                     <Pill key={genre.id}>{genre.name}</Pill>
                   ))}
                 </GenreContainer>
+                <PosterButtons movie={movie} />
               </TitleContainer>
             </DetailsContainer>
+
           </Backdrop>
           <InfoContainer>
             <Subtitle>Overview</Subtitle>
@@ -79,7 +86,7 @@ export default function Details() {
             <Subtitle>Trailers</Subtitle>
             <VideosContainer>
               {movie.videos.length ? (
-                movie.videos.map(video => (
+                movie.videos.map((video) => (
                   <Video
                     key={video.key}
                     type="text/html"
