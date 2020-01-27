@@ -11,6 +11,7 @@ function useQueryParams() {
 }
 export default function Search() {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   const history = useHistory();
   const query = useQueryParams();
   const [movies, setMovies] = useState();
@@ -25,7 +26,7 @@ export default function Search() {
       setLoading(true);
       try {
         const response = await api.get(`/search/movie?query=${q}&page=${page}`);
-        const { results, total_results, total_pages } = response.data;
+        const { results, total_results: totalResults, total_pages: pages } = response.data;
         setMovies(
           results.map((movie) => {
             const url = movie.poster_path
@@ -33,9 +34,11 @@ export default function Search() {
             return { ...movie, url };
           }),
         );
-        setTotal(total_results);
-        setTotalPages(total_pages);
-      } catch (e) { }
+        setTotal(totalResults);
+        setTotalPages(pages);
+      } catch (e) {
+        setError(e.message);
+      }
       setLoading(false);
     }
     searchMovie();
@@ -58,6 +61,13 @@ export default function Search() {
     return (
       <PageContainer>
         <strong>Searching...</strong>
+      </PageContainer>
+    );
+  }
+  if (error) {
+    return (
+      <PageContainer>
+        <strong>{error}</strong>
       </PageContainer>
     );
   }

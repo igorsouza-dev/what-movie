@@ -19,12 +19,11 @@ export default function reducers(state = INITIAL_STATE, action) {
         delete draft.favorites[action.payload.id];
         break;
       case 'TOGGLE_LIST':
-        const { type } = action.payload;
 
-        if (type === state.showList) {
+        if (action.payload.type === state.showList) {
           draft.showList = null;
         } else {
-          draft.showList = type;
+          draft.showList = action.payload.type;
         }
         break;
       case 'REMOVE_WATCHLATER':

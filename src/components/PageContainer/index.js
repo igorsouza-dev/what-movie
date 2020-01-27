@@ -1,13 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import HeaderBar from 'components/HeaderBar';
 import Footer from 'components/Footer';
 import {
- Container, Content, DrawerList, ListItem 
+  Container, Content, DrawerList, ListItem,
 } from './styles';
 
-export default function PageContainer({ children }) {
+function PageContainer({ children }) {
   const showList = useSelector((state) => state.showList);
   const items = useSelector((state) => {
     if (showList === 'favorites') {
@@ -36,3 +37,9 @@ export default function PageContainer({ children }) {
     </Container>
   );
 }
+
+PageContainer.propTypes = {
+  children: PropTypes.element.isRequired,
+};
+
+export default PageContainer;

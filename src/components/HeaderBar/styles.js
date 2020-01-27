@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { device, colors } from 'styles/variables';
+import { colors } from 'styles/variables';
 
 export const Container = styled.div`
   display: flex;

@@ -34,7 +34,7 @@ export default function Main() {
     <Container>
       <Logo />
       <SearchBar />
-      {sections.map(section => (
+      {sections.map((section) => (
         <PostersSection
           key={section.title}
           query={section.query}

@@ -19,7 +19,7 @@ function SearchBar({ small }) {
         placeholder="Type the name of a movie"
         value={input}
         small={small}
-        onChange={e => setInput(e.target.value)}
+        onChange={(e) => setInput(e.target.value)}
       />
       <Button type="submit" small={small}>
         <FaSearch color="#fff" size={24} />

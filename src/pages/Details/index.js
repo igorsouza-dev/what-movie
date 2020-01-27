@@ -26,6 +26,7 @@ export default function Details() {
   const { id } = useParams();
   const [movie, setMovie] = useState();
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   useEffect(() => {
     async function getMovie() {
       try {
@@ -45,12 +46,27 @@ export default function Details() {
           data.overview = 'No overview provided.';
         }
         setMovie(data);
-      } catch (e) { }
+      } catch (e) {
+        setError(e.message);
+      }
     }
     getMovie();
     setLoading(false);
   }, [id]);
-  if (loading) return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <PageContainer>
+        <strong>Loading...</strong>
+      </PageContainer>
+    );
+  }
+  if (error) {
+    return (
+      <PageContainer>
+        <strong>{error}</strong>
+      </PageContainer>
+    );
+  }
   return (
     <PageContainer>
       {movie && (
@@ -78,7 +94,6 @@ export default function Details() {
                 <PosterButtons movie={movie} />
               </TitleContainer>
             </DetailsContainer>
-
           </Backdrop>
           <InfoContainer>
             <Subtitle>Overview</Subtitle>

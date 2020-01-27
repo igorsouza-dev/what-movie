@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Container, Button, PageText } from './styles';
 
-function Paginator({ previousPage, nextPage, page, totalPages }) {
+function Paginator({
+  previousPage, nextPage, page, totalPages,
+}) {
   return (
     <Container>
       <Button type="button" onClick={previousPage}>

@@ -55,5 +55,9 @@ Poster.propTypes = {
     url: PropTypes.string,
     original_title: PropTypes.string,
   }).isRequired,
+  showButtons: PropTypes.bool,
+};
+Poster.defaultProps = {
+  showButtons: false,
 };
 export default Poster;

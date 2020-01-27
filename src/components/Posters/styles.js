@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device, posterSize, screenSize } from 'styles/variables';
+import { posterSize, screenSize } from 'styles/variables';
 
 export const Container = styled.div`
   display: ${(props) => props.type};

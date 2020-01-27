@@ -17,7 +17,7 @@ export const Input = styled.input`
   border-radius: 4px 0 0 4px;
   background: #eee;
   padding: 5px 10px;
-  height: ${props => (props.small ? '30px' : '40px')};
+  height: ${(props) => (props.small ? '30px' : '40px')};
   color: #333;
   font-weight: bold;
   &::placeholder {
@@ -34,5 +34,5 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   background: ${colors.buttons};
-  height: ${props => (props.small ? '30px' : '40px')};
+  height: ${(props) => (props.small ? '30px' : '40px')};
 `;

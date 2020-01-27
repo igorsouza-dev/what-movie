@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device, screenSize } from 'styles/variables';
+import { screenSize } from 'styles/variables';
 
 const drawerSize = 300;
 export const Container = styled.div`

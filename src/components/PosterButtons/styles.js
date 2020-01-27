@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-import { posterSize, colors } from 'styles/variables';
+import { colors } from 'styles/variables';
 
 export const ButtonsContainer = styled.div`
   display: flex;
