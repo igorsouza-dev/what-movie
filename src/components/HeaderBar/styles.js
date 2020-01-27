@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { device } from 'styles/variables';
+import { device, colors } from 'styles/variables';
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const Container = styled.div`
   position: fixed;
   padding: 10px;
   top: 0;
-  background: #772f2f;
+  background: ${colors.header};
   z-index: 10;
   box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.3);
 `;

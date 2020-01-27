@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './variables';
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Oleo+Script|Roboto+Mono&display=swap');
@@ -16,11 +17,9 @@ export default createGlobalStyle`
   }
   body {
     -webkit-font-smoothing: antialiased;
-    background-image: linear-gradient(25deg, #826fe4, #ab90eb, #d1b2f1, #f4d5f7);
+    background: ${colors.background};
     height: 100%;
     margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
   body, input, button, textarea {
     font-family: 'Roboto Mono', monospace;

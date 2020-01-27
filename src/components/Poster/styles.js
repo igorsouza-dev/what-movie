@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-import { posterSize } from 'styles/variables';
+import { posterSize, colors } from 'styles/variables';
 
 export const Container = styled.div`
   height: 100%;
@@ -68,10 +68,10 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #6565ff;
+  background: ${colors.buttons};
   font-weight: bold;
   &:hover {
-    background: ${darken(0.03, '#6565ff')};
+    background: ${darken(0.03, colors.buttons)};
   }
 `;
 

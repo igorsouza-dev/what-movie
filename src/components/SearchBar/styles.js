@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from 'styles/variables';
 
 export const Container = styled.form`
   width: 100%;
@@ -32,6 +33,6 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #d57d56;
+  background: ${colors.buttons};
   height: ${props => (props.small ? '30px' : '40px')};
 `;

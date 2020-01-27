@@ -8,7 +8,12 @@ export const screenSize = {
   desktop: '2560px',
 };
 export const posterSize = 185;
-
+export const colors = {
+  background: '#435058',
+  buttons: '#5c9ead',
+  logo: '#d5dcf9',
+  header: '#91adc2',
+};
 export const device = {
   mobileS: `(min-width: ${screenSize.mobileS})`,
   mobileM: `(min-width: ${screenSize.mobileM})`,
