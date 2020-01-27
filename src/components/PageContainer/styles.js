@@ -16,7 +16,7 @@ export const Content = styled.div`
   width: 100%;
   display: flex;
   padding-top: 80px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   flex: 1;

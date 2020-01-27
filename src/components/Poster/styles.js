@@ -3,7 +3,6 @@ import { darken } from 'polished';
 import { posterSize, colors } from 'styles/variables';
 
 export const Container = styled.div`
-  height: 100%;
   width: 100%;
   max-width: ${posterSize}px;
   margin: 0 5px;

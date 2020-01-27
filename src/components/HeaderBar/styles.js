@@ -21,22 +21,27 @@ export const LinkContainer = styled(Link)`
   width: 100%;
 
   h1 {
-    font-size: 22px;
+    font-size: 16px;
+    width: 55px;
     transition: text-shadow 0.5s ease-out;
     &:hover {
       text-shadow: 0 2px 8px #000;
     }
     @media only screen and (${device.mobileS}) {
-      font-size: 22px;
+      font-size: 16px;
+      width: 55px;
     }
     @media only screen and (${device.mobileM}) {
-      font-size: 24px;
+      font-size: 18px;
+      width: 80px;
     }
     @media only screen and (${device.mobileL}) {
-      font-size: 26px;
+      font-size: 24px;
+      width: 150px;
     }
     @media only screen and (${device.tablet}) {
       font-size: 30px;
+      width: 250px;
     }
   }
 `;
