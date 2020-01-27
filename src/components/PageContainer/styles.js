@@ -22,25 +22,22 @@ export const Content = styled.div`
   flex: 1;
   max-width: 900px;
 
-  @media only screen and (${device.mobileS}) {
-    max-width: ${screenSize.mobileS};
+  @media only screen and (max-width: ${screenSize.mobileS}) {
+    max-width: 100%;
   }
-  @media only screen and (${device.mobileM}) {
+  @media only screen and (min-width: 321px) and (max-width: ${screenSize.mobileM}) {
     max-width: ${screenSize.mobileM};
   }
-  @media only screen and (${device.mobileL}) {
+  @media only screen and (min-width: 376px) and (max-width: ${screenSize.mobileL}) {
     max-width: ${screenSize.mobileL};
   }
-  @media only screen and (${device.tablet}) {
-    max-width: ${screenSize.tablet};
+  @media only screen and (min-width: 426px) and (max-width: 767px)  {
+    max-width: 767px;
   }
-  @media only screen and (${device.laptop}) {
+  @media only screen and (min-width: 768px) and (max-width: ${screenSize.laptop})  {
     max-width: ${screenSize.laptop};
   }
-  @media only screen and (${device.laptopL}) {
-    max-width: ${screenSize.laptopL};
-  }
-  @media only screen and (${device.desktop}) {
+  @media only screen and (min-width: 1025px) {
     max-width: ${screenSize.desktop};
   }
 `;

@@ -27,20 +27,24 @@ export const LinkContainer = styled(Link)`
     &:hover {
       text-shadow: 0 2px 8px #000;
     }
-    @media only screen and (${device.mobileS}) {
+    @media only screen and (max-width: 320px) {
       font-size: 16px;
       width: 55px;
     }
-    @media only screen and (${device.mobileM}) {
+    @media only screen and (min-width: 321px) and (max-width: 480px) {
       font-size: 18px;
       width: 80px;
     }
-    @media only screen and (${device.mobileL}) {
+    @media only screen and (min-width: 481px) and (max-width: 640px) {
       font-size: 24px;
       width: 150px;
     }
-    @media only screen and (${device.tablet}) {
+    @media only screen and (min-width: 641px) and (max-width: 768px) {
       font-size: 30px;
+      width: 200px;
+    }
+    @media only screen and (min-width: 769px) {
+      font-size: 34px;
       width: 250px;
     }
   }

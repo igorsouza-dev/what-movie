@@ -27,12 +27,6 @@ export default function reducers(state = INITIAL_STATE, action) {
           draft.showList = type;
         }
         break;
-      case 'SHOW_LIST':
-        draft.showList = true;
-        break;
-      case 'HIDE_LIST':
-        draft.showList = false;
-        break;
       case 'REMOVE_WATCHLATER':
         delete draft.watchLater[action.payload.id];
         break;

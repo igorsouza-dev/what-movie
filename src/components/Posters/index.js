@@ -19,8 +19,10 @@ Posters.propTypes = {
       id: PropTypes.number.isRequired,
     }),
   ).isRequired,
+  showButtons: PropTypes.bool,
 };
 Posters.defaultProps = {
   type: 'flex',
+  showButtons: false,
 };
 export default Posters;

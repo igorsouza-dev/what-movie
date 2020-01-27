@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from 'styles/variables';
+import { device, screenSize } from 'styles/variables';
 
 export const Container = styled.div`
   display: flex;
@@ -87,30 +87,28 @@ export const VideosContainer = styled.div`
 export const Video = styled.iframe`
   margin: 10px;
   width: 100%;
-  @media only screen and (${device.mobileS}) {
-    width: 280px;
-    max-width: 280px;
-    height: 130px;
-    max-height: 130px;
+  @media only screen and (max-width: ${screenSize.mobileS}) {
+    width: 250px;
+    height: 120px;
   }
-  @media only screen and (${device.mobileM}) {
-    width: 335px;
-    height: 160px;
-    max-width: 335px;
-    max-height: 160px;
+  @media only screen and (min-width: 321px) and (max-width: ${screenSize.mobileM}) {
+    width: 300px;
+    height: 140px;
   }
-  @media only screen and (${device.mobileL}) {
-    width: 385px;
-    height: 180px;
+  @media only screen and (min-width: 376px) and (max-width: ${screenSize.mobileL}) {
+    width: 336px;
+    height: 157px;
   }
-  @media only screen and (${device.tablet}) {
+  @media only screen and (min-width: 426px) and (max-width: 767px)  {
+    width: 386px;
+    height: 181px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: ${screenSize.laptop})  {
     width: 728px;
-    height: 340px;
-    max-width: 728px;
-    max-height: 340px;
+    height: 341px;
   }
-  @media only screen and (${device.laptop}) {
-    width: 984px;
+  @media only screen and (min-width: 1025px) {
+    width: 980px;
     height: 460px;
   }
 `;

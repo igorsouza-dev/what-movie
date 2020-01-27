@@ -16,7 +16,7 @@ function PostersSection({ title, query, showButtons }) {
         const { results } = response.data;
         setMovies(
           results.map((movie) => {
-            const url =              movie.poster_path
+            const url = movie.poster_path
               && `${process.env.REACT_APP_TMDB_IMAGE_URL}/w185${movie.poster_path}`;
             return { ...movie, url };
           }),
