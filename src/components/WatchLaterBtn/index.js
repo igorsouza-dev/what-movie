@@ -9,9 +9,9 @@ export default function WatchLaterBtn() {
   const watchLater = useSelector((state) => state.watchLater);
   const amount = Object.keys(watchLater).length;
   return (
-    <Container onClick={() => dispatch(toggleList('watchLater'))}>
+    <Container onClick={() => dispatch(toggleList('watchLater'))} data-testid="watch-later">
       <FaClock color="#fff" size={24} />
-      <Notification>{amount}</Notification>
+      <Notification data-testid="count-value">{amount}</Notification>
     </Container>
   );
 }

@@ -46,5 +46,10 @@ function PostersSection({ title, query, showButtons }) {
 PostersSection.propTypes = {
   title: PropTypes.string.isRequired,
   query: PropTypes.string.isRequired,
+  showButtons: PropTypes.bool,
 };
+PostersSection.defaultProps = {
+  showButtons: false,
+};
+
 export default PostersSection;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WatchLaterBtn /> should render 1`] = `
+<button
+  class="sc-bdVaJa eXEdri"
+  data-testid="watch-later"
+>
+  <svg
+    color="#fff"
+    fill="currentColor"
+    height="24"
+    size="24"
+    stroke="currentColor"
+    stroke-width="0"
+    style="color: rgb(255, 255, 255);"
+    viewBox="0 0 512 512"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"
+    />
+  </svg>
+  <div
+    class="sc-bwzfXH buZGzN"
+    data-testid="count-value"
+  >
+    0
+  </div>
+</button>
+`;

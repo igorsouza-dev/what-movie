@@ -10,9 +10,9 @@ export default function FavoritesBtn() {
   const amount = Object.keys(favorites).length;
 
   return (
-    <Container onClick={() => dispatch(toggleList('favorites'))}>
+    <Container onClick={() => dispatch(toggleList('favorites'))} data-testid="favorites-btn">
       <FaStar color="#fff" size={24} />
-      <Notification>{amount}</Notification>
+      <Notification data-testid="count-value">{amount}</Notification>
     </Container>
   );
 }

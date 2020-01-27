@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> should render 1`] = `
+<h1
+  class="sc-bdVaJa lhpWri"
+  color="#d5dcf9"
+  data-testid="logo"
+  size="80"
+>
+  What Movie?
+</h1>
+`;
+
+exports[`<Logo /> should render correclty 1`] = `
+<h1
+  class="sc-bdVaJa lhpWri"
+  color="#d5dcf9"
+  data-testid="logo"
+  size="80"
+>
+  What Movie?
+</h1>
+`;

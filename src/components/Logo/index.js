@@ -5,7 +5,7 @@ import { Title } from './styles';
 
 function Logo({ size, color }) {
   return (
-    <Title size={size} color={color}>
+    <Title size={size} color={color} data-testid="logo">
       What Movie?
     </Title>
   );
