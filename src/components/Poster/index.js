@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import {
-  FaFilm,
-} from 'react-icons/fa';
+import { FaFilm } from 'react-icons/fa';
 
 import PosterButtons from 'components/PosterButtons';
 import {
@@ -22,7 +20,6 @@ function Poster({ movie, showButtons }) {
     history.push(`/details/${movie.id}`);
   }
 
-
   return (
     <Container>
       <Score>
@@ -30,17 +27,17 @@ function Poster({ movie, showButtons }) {
         /10
       </Score>
       {movie.url && (
-        <ImgContainer onClick={goToDetail}>
+        <ImgContainer onClick={goToDetail} data-testid="poster-img-container">
           <img src={movie.url} alt={movie.original_title} />
         </ImgContainer>
       )}
       {!movie.url && (
-        <NoPoster onClick={goToDetail}>
+        <NoPoster onClick={goToDetail} data-testid="no-poster-container">
           <FaFilm color="#fff" size={48} />
         </NoPoster>
       )}
       <InfoContainer>
-        <NameContainer onClick={goToDetail}>
+        <NameContainer onClick={goToDetail} data-testid="name-container">
           <strong>{movie.original_title}</strong>
         </NameContainer>
         {showButtons && <PosterButtons movie={movie} />}

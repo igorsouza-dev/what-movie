@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducer, { INITIAL_STATE } from 'store/reducers';
+import reducer from 'store/reducers';
 import App from 'App';
 import apiMock from 'services/api';
 import { getYear, startOfWeek, endOfWeek } from 'date-fns';
@@ -25,12 +25,12 @@ const urls = [
 
 function renderWithRedux(
   ui,
-  { initialState, store = createStore(reducer, INITIAL_STATE) } = {},
+  { initialState, mockStore = createStore(reducer, initialState) } = {}
 ) {
   return {
-    ...render(<Provider store={store}>{ui}</Provider>),
+    ...render(<Provider store={mockStore}>{ui}</Provider>),
 
-    store,
+    mockStore,
   };
 }
 
@@ -39,7 +39,6 @@ describe('<App />', () => {
   it('should render', () => {
     const { container, getByText } = renderWithRedux(<App />);
     const linkElement = getByText(/What movie?/i);
-
 
     expect(linkElement).toBeInTheDocument();
     expect(container.firstChild).toMatchSnapshot();
