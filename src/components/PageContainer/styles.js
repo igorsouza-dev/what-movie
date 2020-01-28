@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { screenSize } from 'styles/variables';
+import { screenSize, colors } from 'styles/variables';
 
 const drawerSize = 300;
 export const Container = styled.div`
@@ -48,17 +48,28 @@ export const DrawerList = styled.div`
   right: ${(props) => (props.show ? '0' : `-${drawerSize}px`)};
   height: 100%;
   z-index: 9;
-  width: ${drawerSize}px;
-  background: #fff;
+  width: 80%;
+  max-width: ${drawerSize}px;
+  background: ${colors.header};
   box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  padding: 15px;
+
+  h3 {
+    color: #fff;
+  }
+  a {
+    color: #333;
+  }
+  overflow-y: auto;
 `;
 
 export const ListItem = styled.li`
   padding: 10px;
   width: 100%;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
   &:hover {
     cursor: pointer;
     background: #ddd;
   }
+
 `;

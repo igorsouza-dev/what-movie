@@ -5,7 +5,7 @@ exports[`<PostersSection /> should render 1`] = `
   class="sc-jzJRlG fxCPVP"
 >
   <h2
-    class="sc-fjdhpX nsimD"
+    class="sc-fjdhpX kwQVFY"
   >
     Test section
   </h2>
@@ -53,7 +53,7 @@ exports[`<PostersSection /> should render a message of empty results 1`] = `
   class="sc-jzJRlG fxCPVP"
 >
   <h2
-    class="sc-fjdhpX nsimD"
+    class="sc-fjdhpX kwQVFY"
   >
     Test section
   </h2>

@@ -19,6 +19,7 @@ import {
   VideosContainer,
   TitleContainer,
   Video,
+  ButtonsContainer
 } from './styles';
 
 
@@ -31,13 +32,13 @@ export default function Details() {
     async function getMovie() {
       try {
         const response = await api.get(
-          `/movie/${id}?append_to_response=videos`,
+          `/movie/${id}?append_to_response=videos`
         );
         const { data } = response;
         const { videos } = data;
         if (videos.results.length) {
           data.videos = videos.results.filter(
-            (video) => video.site === 'YouTube',
+            (video) => video.site === 'YouTube'
           );
         }
         const year = getYear(parseISO(data.release_date));
@@ -91,9 +92,12 @@ export default function Details() {
                     <Pill key={genre.id}>{genre.name}</Pill>
                   ))}
                 </GenreContainer>
-                <PosterButtons movie={movie} />
+
               </TitleContainer>
             </DetailsContainer>
+            <ButtonsContainer>
+              <PosterButtons movie={movie} />
+            </ButtonsContainer>
           </Backdrop>
           <InfoContainer>
             <Subtitle>Overview</Subtitle>
