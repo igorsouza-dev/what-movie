@@ -13,7 +13,6 @@ function renderWithRedux(
 ) {
   return {
     ...render(<Provider store={mockStore}>{ui}</Provider>),
-
     mockStore,
   };
 }

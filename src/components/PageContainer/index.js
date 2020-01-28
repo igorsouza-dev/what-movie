@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import HeaderBar from 'components/HeaderBar';
 import Footer from 'components/Footer';
-import {
-  Container, Content, DrawerList, ListItem,
-} from './styles';
+import { Container, Content, DrawerList, ListItem } from './styles';
 
 function PageContainer({ children }) {
   const showList = useSelector((state) => state.showList);
@@ -23,13 +21,13 @@ function PageContainer({ children }) {
       <DrawerList show={showList}>
         <h3>{showList === 'watchLater' ? 'Watch Later' : 'Favorites'}</h3>
         <ul>
-          {itemsKeys.length ? (
-            itemsKeys.map((key) => (
-              <Link to={`/details/${key}`}>
-                <ListItem>{items[key].original_title}</ListItem>
-              </Link>
-            ))
-          ) : 'No movies added.'}
+          {itemsKeys.length
+            ? itemsKeys.map((key) => (
+                <Link to={`/details/${key}`} key={key}>
+                  <ListItem>{items[key].original_title}</ListItem>
+                </Link>
+              ))
+            : 'No movies added.'}
         </ul>
       </DrawerList>
       <Content>{children}</Content>
