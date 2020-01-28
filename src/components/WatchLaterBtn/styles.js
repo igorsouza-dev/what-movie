@@ -14,10 +14,11 @@ export const Notification = styled.div`
   right: -4px;
   position: absolute;
   border-radius: 50%;
-  background: red;
+  background: #435058;
   color: #fff;
   padding: 2px;
   font-size: 10px;
+  font-weight: bold;
   width: 14px;
   height: 14px;
   display: flex;

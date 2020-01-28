@@ -23,7 +23,7 @@ exports[`<App /> should render 1`] = `
       value=""
     />
     <button
-      class="sc-htpNat dLCsyj"
+      class="sc-htpNat gXhQbE"
       type="submit"
     >
       <svg
@@ -48,7 +48,7 @@ exports[`<App /> should render 1`] = `
     class="sc-kgoBCf jANwOR"
   >
     <h2
-      class="sc-chPdSV byfFmt"
+      class="sc-chPdSV fPxNrS"
     >
       Opening this week
     </h2>
@@ -61,7 +61,7 @@ exports[`<App /> should render 1`] = `
     class="sc-kgoBCf jANwOR"
   >
     <h2
-      class="sc-chPdSV byfFmt"
+      class="sc-chPdSV fPxNrS"
     >
       Top movies of 2020
     </h2>
@@ -74,7 +74,7 @@ exports[`<App /> should render 1`] = `
     class="sc-kgoBCf jANwOR"
   >
     <h2
-      class="sc-chPdSV byfFmt"
+      class="sc-chPdSV fPxNrS"
     >
       Top movies of last year
     </h2>
@@ -109,7 +109,7 @@ exports[`<App /> should render correctly 1`] = `
       value=""
     />
     <button
-      class="sc-htpNat dLCsyj"
+      class="sc-htpNat gXhQbE"
       type="submit"
     >
       <svg
@@ -134,7 +134,7 @@ exports[`<App /> should render correctly 1`] = `
     class="sc-kgoBCf jANwOR"
   >
     <h2
-      class="sc-chPdSV byfFmt"
+      class="sc-chPdSV fPxNrS"
     >
       Opening this week
     </h2>
@@ -239,7 +239,7 @@ exports[`<App /> should render correctly 1`] = `
     class="sc-kgoBCf jANwOR"
   >
     <h2
-      class="sc-chPdSV byfFmt"
+      class="sc-chPdSV fPxNrS"
     >
       Top movies of 2020
     </h2>
@@ -344,7 +344,7 @@ exports[`<App /> should render correctly 1`] = `
     class="sc-kgoBCf jANwOR"
   >
     <h2
-      class="sc-chPdSV byfFmt"
+      class="sc-chPdSV fPxNrS"
     >
       Top movies of last year
     </h2>

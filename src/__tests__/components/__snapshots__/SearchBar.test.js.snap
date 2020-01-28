@@ -12,7 +12,7 @@ exports[`<SearchBar /> should render 1`] = `
     value=""
   />
   <button
-    class="sc-htpNat dLCsyj"
+    class="sc-htpNat gXhQbE"
     type="submit"
   >
     <svg

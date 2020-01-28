@@ -5,10 +5,10 @@ exports[`<Details /> should render 1`] = `
   class="sc-iwsKbI gWyLDK"
 >
   <div
-    class="sc-htoDjs xjROa"
+    class="sc-htoDjs dJCVbN"
   >
     <a
-      class="sc-dnqmqq jhyHix"
+      class="sc-dnqmqq lcgmO"
       href="/"
     >
       <h1
@@ -31,7 +31,7 @@ exports[`<Details /> should render 1`] = `
         value=""
       />
       <button
-        class="sc-htpNat fofiTp"
+        class="sc-htpNat jisJQc"
         type="submit"
       >
         <svg
@@ -73,7 +73,7 @@ exports[`<Details /> should render 1`] = `
         />
       </svg>
       <div
-        class="sc-EHOje Xpsjt"
+        class="sc-EHOje sBAZD"
         data-testid="count-value"
       >
         0
@@ -100,7 +100,7 @@ exports[`<Details /> should render 1`] = `
         />
       </svg>
       <div
-        class="sc-gzVnrw kDXZpB"
+        class="sc-gzVnrw ibxOwE"
         data-testid="count-value"
       >
         0
@@ -108,7 +108,7 @@ exports[`<Details /> should render 1`] = `
     </button>
   </div>
   <div
-    class="sc-gqjmRU gXCvoD"
+    class="sc-gqjmRU jfNrNN"
   >
     <h3>
       Favorites
@@ -124,130 +124,134 @@ exports[`<Details /> should render 1`] = `
       class="sc-kAzzGY dZkYUI"
     >
       <div
-        class="sc-chPdSV hTpCTj"
+        class="sc-chPdSV dpVMpT"
       >
         <div
-          class="sc-kgoBCf gxLeMK"
+          class="sc-kGXeez dkrMkf"
         >
           <img
-            class="sc-ckVGcZ kuWemu"
+            class="sc-jKJlTe PVCQD"
             src="https://image.tmdb.org/t/p/w185/gZCJZOn4l0Zj5hAxsMbxoS6CL0u.jpg"
           />
           <div
-            class="sc-kGXeez hdXUXT"
+            class="sc-kpOJdX kNQtub"
           >
             7/10
           </div>
           <div
-            class="sc-kpOJdX cIZNwl"
+            class="sc-dxgOiQ gnjCAt"
           >
             <h2
-              class="sc-hMqMXs cZuJOs"
+              class="sc-kEYyzF kjjCcb"
             >
               Ariel (1988)
                
             </h2>
             <div
-              class="sc-jKJlTe gGVddi"
+              class="sc-eNQAEJ gwCxre"
             >
               <div
-                class="sc-eNQAEJ jWXipR"
+                class="sc-hMqMXs eNHhuq"
               >
                 73 min
               </div>
                - 
               <div
-                class="sc-eNQAEJ jWXipR"
+                class="sc-hMqMXs eNHhuq"
               >
                 Drama
               </div>
               <div
-                class="sc-eNQAEJ jWXipR"
+                class="sc-hMqMXs eNHhuq"
               >
                 Crime
               </div>
               <div
-                class="sc-eNQAEJ jWXipR"
+                class="sc-hMqMXs eNHhuq"
               >
                 Comedy
               </div>
             </div>
-            <div
-              class="sc-jTzLTM iFTcjh"
+          </div>
+        </div>
+        <div
+          class="sc-kgoBCf hQuyOM"
+        >
+          <div
+            class="sc-jTzLTM iFTcjh"
+          >
+            <button
+              class="sc-fjdhpX sc-jzJRlG ilSPLc"
+              type="button"
             >
-              <button
-                class="sc-fjdhpX sc-jzJRlG ilSPLc"
-                type="button"
+              <svg
+                color="#fff"
+                fill="currentColor"
+                height="20"
+                size="20"
+                stroke="currentColor"
+                stroke-width="0"
+                style="color: rgb(255, 255, 255);"
+                viewBox="0 0 448 512"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  color="#fff"
-                  fill="currentColor"
-                  height="20"
-                  size="20"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  style="color: rgb(255, 255, 255);"
-                  viewBox="0 0 448 512"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                  />
-                </svg>
-                <span>
-                  Watch Later
-                </span>
-              </button>
-              <button
-                class="sc-fjdhpX sc-cSHVUG iAJhyH"
-                data-testid="favorite"
-                type="button"
+                <path
+                  d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                />
+              </svg>
+              <span>
+                Watch Later
+              </span>
+            </button>
+            <button
+              class="sc-fjdhpX sc-cSHVUG iAJhyH"
+              data-testid="favorite"
+              type="button"
+            >
+              <svg
+                color="#fff"
+                fill="currentColor"
+                height="24"
+                size="24"
+                stroke="currentColor"
+                stroke-width="0"
+                style="color: rgb(255, 255, 255);"
+                viewBox="0 0 576 512"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  color="#fff"
-                  fill="currentColor"
-                  height="24"
-                  size="24"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  style="color: rgb(255, 255, 255);"
-                  viewBox="0 0 576 512"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                  />
-                </svg>
-              </button>
-            </div>
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
       <div
-        class="sc-dxgOiQ dPYdPI"
+        class="sc-ckVGcZ eztdpj"
       >
         <h3
-          class="sc-kEYyzF eLoOhG"
+          class="sc-kkGfuU kriFMi"
         >
           Overview
         </h3>
         <p
-          class="sc-hSdWYo bIQQAp"
+          class="sc-eHgmQL gmKbQu"
         >
           Taisto Kasurinen is a Finnish coal miner whose father has just committed suicide and who is framed for a crime he did not commit. In jail, he starts to dream about leaving the country and starting a new life. He escapes from prison but things don't go as planned...
         </p>
         <h3
-          class="sc-kEYyzF eLoOhG"
+          class="sc-kkGfuU kriFMi"
         >
           Trailers
         </h3>
         <div
-          class="sc-kkGfuU uHYB"
+          class="sc-iAyFgw jrTbEH"
         >
           <p
-            class="sc-hSdWYo bIQQAp"
+            class="sc-eHgmQL gmKbQu"
           >
             No video found.
           </p>
@@ -266,10 +270,10 @@ exports[`<Details /> should render the videos section when videos are provided 1
   class="sc-iwsKbI gWyLDK"
 >
   <div
-    class="sc-htoDjs xjROa"
+    class="sc-htoDjs dJCVbN"
   >
     <a
-      class="sc-dnqmqq jhyHix"
+      class="sc-dnqmqq lcgmO"
       href="/"
     >
       <h1
@@ -292,7 +296,7 @@ exports[`<Details /> should render the videos section when videos are provided 1
         value=""
       />
       <button
-        class="sc-htpNat fofiTp"
+        class="sc-htpNat jisJQc"
         type="submit"
       >
         <svg
@@ -334,7 +338,7 @@ exports[`<Details /> should render the videos section when videos are provided 1
         />
       </svg>
       <div
-        class="sc-EHOje Xpsjt"
+        class="sc-EHOje sBAZD"
         data-testid="count-value"
       >
         0
@@ -361,7 +365,7 @@ exports[`<Details /> should render the videos section when videos are provided 1
         />
       </svg>
       <div
-        class="sc-gzVnrw kDXZpB"
+        class="sc-gzVnrw ibxOwE"
         data-testid="count-value"
       >
         0
@@ -369,7 +373,7 @@ exports[`<Details /> should render the videos section when videos are provided 1
     </button>
   </div>
   <div
-    class="sc-gqjmRU gXCvoD"
+    class="sc-gqjmRU jfNrNN"
   >
     <h3>
       Favorites
@@ -385,131 +389,135 @@ exports[`<Details /> should render the videos section when videos are provided 1
       class="sc-kAzzGY dZkYUI"
     >
       <div
-        class="sc-chPdSV hTpCTj"
+        class="sc-chPdSV dpVMpT"
       >
         <div
-          class="sc-kgoBCf gxLeMK"
+          class="sc-kGXeez dkrMkf"
         >
           <img
-            class="sc-ckVGcZ kuWemu"
+            class="sc-jKJlTe PVCQD"
             src="https://image.tmdb.org/t/p/w185/gZCJZOn4l0Zj5hAxsMbxoS6CL0u.jpg"
           />
           <div
-            class="sc-kGXeez hdXUXT"
+            class="sc-kpOJdX kNQtub"
           >
             7/10
           </div>
           <div
-            class="sc-kpOJdX cIZNwl"
+            class="sc-dxgOiQ gnjCAt"
           >
             <h2
-              class="sc-hMqMXs cZuJOs"
+              class="sc-kEYyzF kjjCcb"
             >
               Ariel (1988)
                
             </h2>
             <div
-              class="sc-jKJlTe gGVddi"
+              class="sc-eNQAEJ gwCxre"
             >
               <div
-                class="sc-eNQAEJ jWXipR"
+                class="sc-hMqMXs eNHhuq"
               >
                 73 min
               </div>
                - 
               <div
-                class="sc-eNQAEJ jWXipR"
+                class="sc-hMqMXs eNHhuq"
               >
                 Drama
               </div>
               <div
-                class="sc-eNQAEJ jWXipR"
+                class="sc-hMqMXs eNHhuq"
               >
                 Crime
               </div>
               <div
-                class="sc-eNQAEJ jWXipR"
+                class="sc-hMqMXs eNHhuq"
               >
                 Comedy
               </div>
             </div>
-            <div
-              class="sc-jTzLTM iFTcjh"
+          </div>
+        </div>
+        <div
+          class="sc-kgoBCf hQuyOM"
+        >
+          <div
+            class="sc-jTzLTM iFTcjh"
+          >
+            <button
+              class="sc-fjdhpX sc-jzJRlG ilSPLc"
+              type="button"
             >
-              <button
-                class="sc-fjdhpX sc-jzJRlG ilSPLc"
-                type="button"
+              <svg
+                color="#fff"
+                fill="currentColor"
+                height="20"
+                size="20"
+                stroke="currentColor"
+                stroke-width="0"
+                style="color: rgb(255, 255, 255);"
+                viewBox="0 0 448 512"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  color="#fff"
-                  fill="currentColor"
-                  height="20"
-                  size="20"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  style="color: rgb(255, 255, 255);"
-                  viewBox="0 0 448 512"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                  />
-                </svg>
-                <span>
-                  Watch Later
-                </span>
-              </button>
-              <button
-                class="sc-fjdhpX sc-cSHVUG iAJhyH"
-                data-testid="favorite"
-                type="button"
+                <path
+                  d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                />
+              </svg>
+              <span>
+                Watch Later
+              </span>
+            </button>
+            <button
+              class="sc-fjdhpX sc-cSHVUG iAJhyH"
+              data-testid="favorite"
+              type="button"
+            >
+              <svg
+                color="#fff"
+                fill="currentColor"
+                height="24"
+                size="24"
+                stroke="currentColor"
+                stroke-width="0"
+                style="color: rgb(255, 255, 255);"
+                viewBox="0 0 576 512"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  color="#fff"
-                  fill="currentColor"
-                  height="24"
-                  size="24"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  style="color: rgb(255, 255, 255);"
-                  viewBox="0 0 576 512"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                  />
-                </svg>
-              </button>
-            </div>
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
       <div
-        class="sc-dxgOiQ dPYdPI"
+        class="sc-ckVGcZ eztdpj"
       >
         <h3
-          class="sc-kEYyzF eLoOhG"
+          class="sc-kkGfuU kriFMi"
         >
           Overview
         </h3>
         <p
-          class="sc-hSdWYo bIQQAp"
+          class="sc-eHgmQL gmKbQu"
         >
           Taisto Kasurinen is a Finnish coal miner whose father has just committed suicide and who is framed for a crime he did not commit. In jail, he starts to dream about leaving the country and starting a new life. He escapes from prison but things don't go as planned...
         </p>
         <h3
-          class="sc-kEYyzF eLoOhG"
+          class="sc-kkGfuU kriFMi"
         >
           Trailers
         </h3>
         <div
-          class="sc-kkGfuU uHYB"
+          class="sc-iAyFgw jrTbEH"
         >
           <iframe
             allowfullscreen=""
-            class="sc-iAyFgw CgfwC youtube-player"
+            class="sc-hSdWYo hcZNGB youtube-player"
             frameborder="0"
             src="https://www.youtube.com/embed/ayoutubekey?autoplay=0"
             title="YouTube"

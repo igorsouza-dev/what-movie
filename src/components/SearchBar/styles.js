@@ -27,7 +27,7 @@ export const Input = styled.input`
   }
 `;
 export const Button = styled.button`
-  width: 60px;
+  max-width: 60px;
   border: 0;
   border-radius: 0 4px 4px 0;
   display: flex;

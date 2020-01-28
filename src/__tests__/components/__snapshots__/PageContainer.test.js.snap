@@ -5,10 +5,10 @@ exports[`<PageContainer /> should render 1`] = `
   class="sc-iwsKbI gWyLDK"
 >
   <div
-    class="sc-htoDjs xjROa"
+    class="sc-htoDjs dJCVbN"
   >
     <a
-      class="sc-dnqmqq jhyHix"
+      class="sc-dnqmqq lcgmO"
       href="/"
     >
       <h1
@@ -31,7 +31,7 @@ exports[`<PageContainer /> should render 1`] = `
         value=""
       />
       <button
-        class="sc-htpNat fofiTp"
+        class="sc-htpNat jisJQc"
         type="submit"
       >
         <svg
@@ -73,7 +73,7 @@ exports[`<PageContainer /> should render 1`] = `
         />
       </svg>
       <div
-        class="sc-EHOje Xpsjt"
+        class="sc-EHOje sBAZD"
         data-testid="count-value"
       >
         0
@@ -100,7 +100,7 @@ exports[`<PageContainer /> should render 1`] = `
         />
       </svg>
       <div
-        class="sc-gzVnrw kDXZpB"
+        class="sc-gzVnrw ibxOwE"
         data-testid="count-value"
       >
         0
@@ -108,7 +108,7 @@ exports[`<PageContainer /> should render 1`] = `
     </button>
   </div>
   <div
-    class="sc-gqjmRU gXCvoD"
+    class="sc-gqjmRU jfNrNN"
   >
     <h3>
       Favorites

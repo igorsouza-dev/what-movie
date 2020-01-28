@@ -22,7 +22,7 @@ exports[`<WatchLaterBtn /> should render 1`] = `
     />
   </svg>
   <div
-    class="sc-bwzfXH buZGzN"
+    class="sc-bwzfXH fOjycc"
     data-testid="count-value"
   >
     0

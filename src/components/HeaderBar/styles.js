@@ -15,15 +15,52 @@ export const Container = styled.div`
   background: ${colors.header};
   z-index: 10;
   box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.3);
+
+  form {
+
+    input {
+
+      @media only screen and (min-width: 300px) {
+        font-size: 12px;
+        &::placeholder {
+          font-size: 10px;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        font-size: 14px;
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+
+    button {
+      margin-right: 10px;
+      @media only screen and (min-width: 300px) {
+        padding: 2px;
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        padding: 5px;
+        svg {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  }
 `;
 
 export const LinkContainer = styled(Link)`
-  width: 100%;
 
   h1 {
     font-size: 16px;
     width: 55px;
     transition: text-shadow 0.5s ease-out;
+    margin-right: 10px;
     &:hover {
       text-shadow: 0 2px 8px #000;
     }

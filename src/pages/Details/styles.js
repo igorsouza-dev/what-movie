@@ -14,10 +14,30 @@ export const Container = styled.div`
 export const Backdrop = styled.div`
   background: url(${(props) => props.background});
   width: 100%;
-  height: 250px;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 4px 4px 0 0;
+  display: flex;
+  flex-direction: column;
+`;
+export const ButtonsContainer = styled.div`
+  width: 100%;
+  padding: 10px;
+  background: rgba(255,255,255,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > div {
+    max-width: 300px;
+
+    button {
+      border-radius: 4px;
+      margin: 2px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
 `;
 export const DetailsContainer = styled.div`
   display: flex;
