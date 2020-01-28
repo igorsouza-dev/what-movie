@@ -93,6 +93,7 @@ exports[`<Poster /> should render correclty when showing buttons 1`] = `
       </button>
       <button
         class="sc-bwzfXH sc-bxivhb hzAuhW"
+        data-testid="favorite"
         type="button"
       >
         <svg

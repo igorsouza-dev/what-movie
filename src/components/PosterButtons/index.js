@@ -46,7 +46,7 @@ function PosterButtons({ movie }) {
         )}
         <span>Watch Later</span>
       </WatchLater>
-      <Favorite type="button" onClick={() => handleFavorite(movie)}>
+      <Favorite type="button" onClick={() => handleFavorite(movie)} data-testid="favorite">
         <FaStar size={24} color={isOnFavorites ? '#ff0' : '#fff'} />
       </Favorite>
     </ButtonsContainer>
