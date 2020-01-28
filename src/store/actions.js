@@ -28,9 +28,3 @@ export function toggleList(type) {
     payload: { type },
   };
 }
-export function reset() {
-  return {
-    type: 'RESET',
-    payload: {},
-  };
-}

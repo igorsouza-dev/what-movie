@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Posters /> should change display when passing prop 1`] = `
+<div
+  class="sc-jTzLTM dgMVdo"
+  type="grid"
+>
+  <div
+    class="sc-ifAKCX cRQFzp"
+  >
+    <div
+      class="sc-bZQynM mjAAS"
+    >
+      /10
+    </div>
+    <div
+      class="sc-VigVT iOQNnG"
+      data-testid="poster-img-container"
+    >
+      <img
+        alt="Test movie 1"
+        src="http://test.url.com/1"
+      />
+    </div>
+    <div
+      class="sc-gzVnrw dFkHji"
+    >
+      <div
+        class="sc-EHOje IcjOp"
+        data-testid="name-container"
+      >
+        <strong>
+          Test movie 1
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-ifAKCX cRQFzp"
+  >
+    <div
+      class="sc-bZQynM mjAAS"
+    >
+      /10
+    </div>
+    <div
+      class="sc-VigVT iOQNnG"
+      data-testid="poster-img-container"
+    >
+      <img
+        alt="Test movie 2"
+        src="http://test.url.com/2"
+      />
+    </div>
+    <div
+      class="sc-gzVnrw dFkHji"
+    >
+      <div
+        class="sc-EHOje IcjOp"
+        data-testid="name-container"
+      >
+        <strong>
+          Test movie 2
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-ifAKCX cRQFzp"
+  >
+    <div
+      class="sc-bZQynM mjAAS"
+    >
+      /10
+    </div>
+    <div
+      class="sc-VigVT iOQNnG"
+      data-testid="poster-img-container"
+    >
+      <img
+        alt="Test movie 3"
+        src="http://test.url.com/3"
+      />
+    </div>
+    <div
+      class="sc-gzVnrw dFkHji"
+    >
+      <div
+        class="sc-EHOje IcjOp"
+        data-testid="name-container"
+      >
+        <strong>
+          Test movie 3
+        </strong>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Posters /> should render 1`] = `
+<div
+  class="sc-jTzLTM gjILoC"
+  type="flex"
+>
+  <div
+    class="sc-ifAKCX cRQFzp"
+  >
+    <div
+      class="sc-bZQynM mjAAS"
+    >
+      /10
+    </div>
+    <div
+      class="sc-VigVT iOQNnG"
+      data-testid="poster-img-container"
+    >
+      <img
+        alt="Test movie 1"
+        src="http://test.url.com/1"
+      />
+    </div>
+    <div
+      class="sc-gzVnrw dFkHji"
+    >
+      <div
+        class="sc-EHOje IcjOp"
+        data-testid="name-container"
+      >
+        <strong>
+          Test movie 1
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-ifAKCX cRQFzp"
+  >
+    <div
+      class="sc-bZQynM mjAAS"
+    >
+      /10
+    </div>
+    <div
+      class="sc-VigVT iOQNnG"
+      data-testid="poster-img-container"
+    >
+      <img
+        alt="Test movie 2"
+        src="http://test.url.com/2"
+      />
+    </div>
+    <div
+      class="sc-gzVnrw dFkHji"
+    >
+      <div
+        class="sc-EHOje IcjOp"
+        data-testid="name-container"
+      >
+        <strong>
+          Test movie 2
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-ifAKCX cRQFzp"
+  >
+    <div
+      class="sc-bZQynM mjAAS"
+    >
+      /10
+    </div>
+    <div
+      class="sc-VigVT iOQNnG"
+      data-testid="poster-img-container"
+    >
+      <img
+        alt="Test movie 3"
+        src="http://test.url.com/3"
+      />
+    </div>
+    <div
+      class="sc-gzVnrw dFkHji"
+    >
+      <div
+        class="sc-EHOje IcjOp"
+        data-testid="name-container"
+      >
+        <strong>
+          Test movie 3
+        </strong>
+      </div>
+    </div>
+  </div>
+</div>
+`;

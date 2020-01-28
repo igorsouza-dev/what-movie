@@ -4,10 +4,7 @@
     "es6": true,
     "jest": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -19,16 +16,11 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "jest"
-  ],
+  "plugins": ["react", "jest"],
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": [
-          "src"
-        ]
+        "paths": ["src"]
       }
     }
   },
@@ -36,10 +28,17 @@
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [
-          ".jsx",
-          ".js"
-        ]
+        "extensions": [".jsx", ".js"]
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "functions": "never",
+        "objects": "only-multiline",
+        "arrays": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline"
       }
     ],
     "import/prefer-default-export": "off",

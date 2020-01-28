@@ -1,35 +1,32 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 import SearchBar from 'components/SearchBar';
-import reducer, { INITIAL_STATE } from 'store/reducers';
-
-function renderWithRedux(
-  ui,
-  { initialState, store = createStore(reducer, INITIAL_STATE) } = {},
-) {
-  return {
-    ...render(<Provider store={store}>{ui}</Provider>),
-
-    store,
-  };
-}
-
 
 describe('<SearchBar />', () => {
   afterEach(cleanup);
   it('should render', () => {
     const history = createMemoryHistory();
-    const { container, getByTestId } = renderWithRedux(
+    const { container, getByTestId } = render(
       <Router history={history}>
         <SearchBar />
-      </Router>,
+      </Router>
     );
     const linkElement = getByTestId(/search-bar/i);
     expect(linkElement).toBeInTheDocument();
     expect(container.firstChild).toMatchSnapshot();
+  });
+  it('should navigate to the details page when clicked', () => {
+    const history = createMemoryHistory();
+    const { container, getByTestId } = render(
+      <Router history={history}>
+        <SearchBar />
+      </Router>
+    );
+    fireEvent.change(container.querySelector('input[type=text]'), { target: { value: 'test' } });
+    fireEvent.click(getByTestId('search-bar').querySelector('button'));
+    const expectedUrl = `${history.location.pathname}${history.location.search}`;
+    expect(expectedUrl).toEqual('/search?q=test');
   });
 });
