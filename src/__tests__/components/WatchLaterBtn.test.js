@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup } from '@testing-library/react';
+import { cleanup, fireEvent } from '@testing-library/react';
 import WatchLaterBtn from 'components/WatchLaterBtn';
 
 import { renderWithRedux } from '../utils/redux';
@@ -29,5 +29,15 @@ describe('<WatchLaterBtn />', () => {
     );
 
     expect(getByTestId(/count-value/i)).toHaveTextContent('2');
+  });
+  it('should change the showList state to favorites when clicked', () => {
+    const { getByTestId, mockStore } = renderWithRedux(
+      <WatchLaterBtn />
+    );
+    fireEvent.click(getByTestId(/watch-later/i));
+    expect(mockStore.getState().showList).toBe('watchLater');
+
+    fireEvent.click(getByTestId(/watch-later/i));
+    expect(mockStore.getState().showList).not.toBe('watchLater');
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup } from '@testing-library/react';
+import { cleanup, fireEvent } from '@testing-library/react';
 import FavoritesBtn from 'components/FavoritesBtn';
 import { renderWithRedux } from '../utils/redux';
 
@@ -28,5 +28,15 @@ describe('<FavoritesBtn />', () => {
     );
 
     expect(getByTestId(/count-value/i)).toHaveTextContent('2');
+  });
+  it('should change the showList state to favorites when clicked', () => {
+    const { getByTestId, mockStore } = renderWithRedux(
+      <FavoritesBtn />
+    );
+    fireEvent.click(getByTestId(/favorites-btn/i));
+    expect(mockStore.getState().showList).toBe('favorites');
+
+    fireEvent.click(getByTestId(/favorites-btn/i));
+    expect(mockStore.getState().showList).not.toBe('favorites');
   });
 });
