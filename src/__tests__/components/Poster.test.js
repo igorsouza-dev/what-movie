@@ -1,21 +1,9 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducer from 'store/reducers';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 import Poster from 'components/Poster';
-
-function renderWithRedux(
-  ui,
-  { initialState, mockStore = createStore(reducer, initialState) } = {}
-) {
-  return {
-    ...render(<Provider store={mockStore}>{ui}</Provider>),
-    mockStore,
-  };
-}
+import { renderWithRedux } from '../utils/redux';
 
 describe('<Poster />', () => {
   afterEach(cleanup);

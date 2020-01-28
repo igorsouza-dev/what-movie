@@ -1,20 +1,8 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { render, cleanup, fireEvent } from '@testing-library/react';
+import { cleanup, fireEvent } from '@testing-library/react';
 import PosterButtons from 'components/PosterButtons';
-import reducer from 'store/reducers';
 
-function renderWithRedux(
-  ui,
-  { initialState, mockStore = createStore(reducer, initialState) } = {}
-) {
-  return {
-    ...render(<Provider store={mockStore}>{ui}</Provider>),
-    mockStore,
-  };
-}
-
+import { renderWithRedux } from '../utils/redux';
 
 describe('<PosterButtons />', () => {
   afterEach(cleanup);

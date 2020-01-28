@@ -1,11 +1,10 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducer from 'store/reducers';
+import { cleanup } from '@testing-library/react';
 import App from 'App';
 import apiMock from 'services/api';
 import { getYear, startOfWeek, endOfWeek } from 'date-fns';
+
+import { renderWithRedux } from './utils/redux';
 
 jest.mock('services/api');
 
@@ -23,16 +22,6 @@ const urls = [
   `/discover/movie?primary_release_year=${lastYear}&sort_by=vote_average.desc&vote_count.gte=1000`,
 ];
 
-function renderWithRedux(
-  ui,
-  { initialState, mockStore = createStore(reducer, initialState) } = {}
-) {
-  return {
-    ...render(<Provider store={mockStore}>{ui}</Provider>),
-
-    mockStore,
-  };
-}
 
 describe('<App />', () => {
   afterEach(cleanup);

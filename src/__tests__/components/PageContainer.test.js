@@ -1,21 +1,10 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducer from 'store/reducers';
-import { render, cleanup } from '@testing-library/react';
+import { cleanup } from '@testing-library/react';
 import PageContainer from 'components/PageContainer';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-function renderWithRedux(
-  ui,
-  { initialState, mockStore = createStore(reducer, initialState) } = {}
-) {
-  return {
-    ...render(<Provider store={mockStore}>{ui}</Provider>),
-    mockStore,
-  };
-}
+import { renderWithRedux } from '../utils/redux';
 
 describe('<PageContainer />', () => {
   afterEach(cleanup);

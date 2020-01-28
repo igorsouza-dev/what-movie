@@ -1,26 +1,13 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { cleanup } from '@testing-library/react';
 import FavoritesBtn from 'components/FavoritesBtn';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import reducer from 'store/reducers';
-
-function renderWithRedux(
-  ui,
-  { initialState, mockStore = createStore(reducer, initialState) } = {},
-) {
-  return {
-    ...render(<Provider store={mockStore}>{ui}</Provider>),
-
-    mockStore,
-  };
-}
+import { renderWithRedux } from '../utils/redux';
 
 describe('<FavoritesBtn />', () => {
   afterEach(cleanup);
   it('should render', () => {
     const { container, getByTestId } = renderWithRedux(
-      <FavoritesBtn />,
+      <FavoritesBtn />
     );
 
     const linkElement = getByTestId(/favorites-btn/i);
@@ -37,7 +24,7 @@ describe('<FavoritesBtn />', () => {
             1235: { id: 1235, original_title: 'Test 2' },
           },
         },
-      },
+      }
     );
 
     expect(getByTestId(/count-value/i)).toHaveTextContent('2');

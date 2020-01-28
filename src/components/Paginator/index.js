@@ -8,11 +8,11 @@ function Paginator({
 }) {
   return (
     <Container>
-      <Button type="button" onClick={previousPage}>
+      <Button type="button" onClick={previousPage} data-testid="prev-button">
         <FaChevronLeft color="#fff" size={48} />
       </Button>
       <PageText>{`Page ${page}/${totalPages}`}</PageText>
-      <Button type="button" onClick={nextPage}>
+      <Button type="button" onClick={nextPage} data-testid="next-button">
         <FaChevronRight color="#fff" size={48} />
       </Button>
     </Container>
