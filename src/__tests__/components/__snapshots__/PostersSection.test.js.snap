@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostersSection /> should render 1`] = `
+<div
+  class="sc-jzJRlG fxCPVP"
+>
+  <h2
+    class="sc-fjdhpX nsimD"
+  >
+    Test section
+  </h2>
+  <div
+    class="sc-jTzLTM gjILoC"
+    type="flex"
+  >
+    <div
+      class="sc-ifAKCX cRQFzp"
+    >
+      <div
+        class="sc-bZQynM mjAAS"
+      >
+        /10
+      </div>
+      <div
+        class="sc-VigVT iOQNnG"
+        data-testid="poster-img-container"
+      >
+        <img
+          alt="Movie name test"
+          src="https://image.tmdb.org/t/p/w185123456.jpg"
+        />
+      </div>
+      <div
+        class="sc-gzVnrw dFkHji"
+      >
+        <div
+          class="sc-EHOje IcjOp"
+          data-testid="name-container"
+        >
+          <strong>
+            Movie name test
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`<PostersSection /> should render a message of empty results 1`] = `
+<div
+  class="sc-jzJRlG fxCPVP"
+>
+  <h2
+    class="sc-fjdhpX nsimD"
+  >
+    Test section
+  </h2>
+  <div>
+    No movies found
+  </div>
+  
+</div>
+`;

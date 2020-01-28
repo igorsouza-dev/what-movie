@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup } from '@testing-library/react';
+import { cleanup, waitForElement } from '@testing-library/react';
 import App from 'App';
 import apiMock from 'services/api';
 import { getYear, startOfWeek, endOfWeek } from 'date-fns';
@@ -32,23 +32,47 @@ describe('<App />', () => {
     expect(linkElement).toBeInTheDocument();
     expect(container.firstChild).toMatchSnapshot();
   });
-  it('should render correctly', () => {
-    const { getAllByText } = renderWithRedux(<App />);
-    apiMock.get.mockResolvedValueOnce({
+  it('should render correctly', async () => {
+    apiMock.get.mockResolvedValue({
       data: {
         results: [
           {
-            id: '1234',
-            original_title: 'Movie name test',
+            id: 1,
+            original_title: 'Movie name test 1',
+            average_vote: 10,
+            poster_path: '1.jpg',
+          },
+          {
+            id: 2,
+            original_title: 'Movie name test 2',
+            average_vote: 10,
+            poster_path: '2.jpg',
+          },
+          {
+            id: 3,
+            original_title: 'Movie name test 3',
+            average_vote: 10,
+            poster_path: '3.jpg',
           },
         ],
       },
     });
 
+    const {
+      container, getAllByText, getAllByTestId
+    } = renderWithRedux(<App />);
+
+
     expect(getAllByText('Loading...')).toHaveLength(3);
+    await waitForElement(() => getAllByTestId(/poster-img-container/i));
     // expect(apiMock.get).toHaveBeenCalledTimes(3);
     expect(apiMock.get).toHaveBeenCalledWith(urls[0]);
     expect(apiMock.get).toHaveBeenCalledWith(urls[1]);
     expect(apiMock.get).toHaveBeenCalledWith(urls[2]);
+    expect(getAllByText('Movie name test 1')).toHaveLength(3);
+    expect(getAllByText('Movie name test 2')).toHaveLength(3);
+    expect(getAllByText('Movie name test 3')).toHaveLength(3);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
